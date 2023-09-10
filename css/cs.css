@@ -1,0 +1,96 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive , sans-serif;
+}
+
+/* Center the heading */
+#head {
+    text-align: center;
+    font-size: 200%;
+    padding: 19px; /* Add some padding to improve readability */
+}
+#sec{
+    background-color: #f0f0f0; /* Add a grey background to all sections */
+    border: 1px solid black;
+    margin: ;
+    padding: 0px; /* Add padding to improve spacing */
+}
+
+/* Style individual section titles */
+#chicken, #beef, #sushi {
+    float: right; /* Right-align the text */
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 3px 28px 3px 28px;
+    font-size: 125%;
+}
+#chicken{
+	background: lightblue;
+}
+#beef{
+	background: lightgreen;
+}
+#sushi{
+	background: #ffff5c;
+}
+
+/* Style paragraph text */
+#para {
+    padding: 15px;
+    clear: both; /* Clear the floats to ensure proper spacing */
+}
+@media (min-width: 992px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    /* Create a common style for sections */
+    .section1{
+        margin-left: 2%;
+    } 
+    #sec {
+        flex: 1;
+        float: left;
+        width: 30%;
+        margin-right: 2%;
+    }
+    .section1{
+        margin-left: 2%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.7px){
+    .container{
+        display: flex;
+        justify-content: space-between;        
+        flex-wrap: wrap;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .section1 , .section2{
+        flex: 1;
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
+    }
+    .section3{
+        flex: 1;
+        flex-basis: 100%;
+    }
+    .section1{
+        margin-right: 2%;
+    }
+    .section3{
+        margin-top: 2%;
+    }
+}
+@media (max-width: 767px){
+    #sec{
+        margin-right: 4%;
+        margin-left: 4%;
+        margin-bottom: 2%;
+    }
+}
